@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرس عمر وملاك | Omar & Malak's Wedding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Variables for easy customization */
+        :root {
+            --blush: #f9e4e4;
+            --champagne: #f7e7ce;
+            --sage: #c9d4c8;
+            --ivory: #fffff0;
+            --gold: #d4af37;
+            --dark-green: #5a716a;
+            --text-dark: #333333;
+            --text-light: #666666;
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', 'Amiri', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--ivory);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', 'Amiri', serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background-color: var(--gold);
+        }
+
+        section {
+            padding: 5rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--sage);
+            color: var(--dark-green);
+            border: none;
+            border-radius: 30px;
+            font-family: 'Lato', 'Amiri', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            background-color: var(--dark-green);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-primary {
+            background-color: var(--gold);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #b8941f;
+        }
+
+        /* Language Toggle */
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: white;
+            border-radius: 20px;
+            padding: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .lang-btn {
+            padding: 8px 15px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            border-radius: 15px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background-color: var(--gold);
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f9e4e4"/><path d="M0 0L100 100M100 0L0 100" stroke="%23f7e7ce" stroke-width="2"/></svg>');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 0%, var(--blush) 100%);
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .couple-names {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: var(--dark-green);
+            animation: pulse 2s infinite;
+        }
+
+        .wedding-date {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .textt-date {
+            font-size: 0.67rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        .textttt-date {
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        .texttt-date {
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            min-width: 100px;
+        }
+
+        .countdown-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-images {
+            flex: 1;
+            display: flex;
+            gap: 1rem;
+            min-width: 300px;
+        }
+
+        .about-img {
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .about-img:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Event Details */
+        .event-details {
+            background-color: var(--champagne);
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .detail-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .detail-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .detail-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        /* Schedule Section */
+        .schedule {
+            background-color: white;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--sage);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            width: 45%;
+            position: relative;
+        }
+
+        .timeline-content::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            transform: rotate(45deg);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::after {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            left: -10px;
+        }
+
+        .timeline-time {
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background-color: var(--blush);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 250px;
+            cursor: pointer;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* RSVP Section */
+        .rsvp {
+            background-color: white;
+        }
+
+        .rsvp-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--ivory);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Lato', 'Amiri', sans-serif;
+            font-size: 1rem;
+        }
+
+        .form-textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        /* Guest Wishes Section */
+        .wishes {
+            background-color: var(--champagne);
+        }
+
+        .wishes-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Map Section */
+        .map {
+            padding: 0;
+            height: 400px;
+        }
+
+        .map-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark-green);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--gold);
+        }
+
+        .music-btn {
+            background-color: var(--gold);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem auto;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .music-btn:hover {
+            background-color: #b8941f;
+            transform: scale(1.1);
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background-color: var(--sage);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        /* Language-specific styles */
+        .lang-ar {
+            direction: rtl;
+            font-family: 'Amiri', serif;
+        }
+
+        .lang-en {
+            direction: ltr;
+            font-family: 'Lato', sans-serif;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .couple-names {
+                font-size: 3rem;
+            }
+            
+            .countdown {
+                gap: 0.5rem;
+            }
+            
+            .countdown-item {
+                min-width: 70px;
+                padding: 0.75rem;
+            }
+            
+            .countdown-number {
+                font-size: 1.5rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-images {
+                width: 100%;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                flex-direction: row !important;
+                padding-left: 50px;
+            }
+            
+            .timeline-content {
+                width: 100%;
+            }
+            
+            .timeline-content::after {
+                left: -10px !important;
+                right: auto !important;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="lang-ar">
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button class="lang-btn active" data-lang="ar">العربية</button>
+        <button class="lang-btn" data-lang="en">English</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="textt-date fade-in" data-ar="﴿وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً﴾
+" data-en="﴿وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً﴾
+">﴿وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً﴾
+</h1>            
+            <h1 class="texttt-date fade-in" data-ar="السيد جهاد إسماعيل قريق و السيد محمد موسى أبورياله" data-en="Jehad Ismail Qariq and Muhammad Mousa Aburyalh">السيد جهاد إسماعيل قريق و السيد محمد موسى أبورياله</h1>
+            <h1 class="textttt-date fade-in" data-ar="بكل فخر واعتزاز، يتشرفان بدعوتكم لمشاركتهم فرحة زفاف أبنائهما" data-en="With pride and honor, they are delighted to invite you to share in the joy of their sons’ wedding">بكل فخر واعتزاز، يتشرفان بدعوتكم لمشاركتهما فرحة زفاف أبنائهما</h1>         
+            <h1 class="couple-names fade-in" data-ar="عمر ❤️ اميرته" data-en="Omar ❤️ Malak">عمر ❤️ اميرته</h1>
+<p class="wedding-date fade-in" data-ar="٦ فبراير ٢٠٢٦ • عمان، الأردن" data-en="Feb 6, 2026 • Amman, Jordan">٦ فبراير ٢٠٢٦ • عمان، الأردن</p>
+            
+            <div class="countdown fade-in">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label" data-ar="أيام" data-en="Days">أيام</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label" data-ar="ساعات" data-en="Hours">ساعات</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label" data-ar="دقائق" data-en="Minutes">دقائق</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label" data-ar="ثواني" data-en="Seconds">ثواني</div>
+                </div>
+            </div>
+            
+            <p class="fade-in" id="countdown-text" data-ar="حتى يوم عمر الكبير 💍" data-en="Until Omar & Malak's Big Day 💍">حتى يوم عمر وملاك الكبير 💍</p>
+            <a href="#details" class="btn btn-primary fade-in" data-ar="تفاصيل الحفل" data-en="Wedding Details">تفاصيل الحفل</a>
+        </div>
+    </section>
+
+    <!-- About the Couple -->
+   <!--   <section class="about" id="about">
+        <div class="container">
+            <h2 data-ar="قصتنا" data-en="Our Story">قصتنا</h2>
+          <div class="about-content">
+                <div class="about-text">
+                    <p data-ar="تعرفنا قبل خمس سنوات خلال معرض للتصوير الفوتوغرافي في وسط البلد. كان عمر يعرض أعماله، وأسرت ملاك برؤيته الفنية. ما بدأ كشغف مشترك بالفن سرعان ما تطور إلى صداقة جميلة ثم إلى حب." data-en="We met five years ago during a photography exhibition in downtown Cairo. Omar was showcasing his work, and Malak was captivated by his artistic vision. What started as a shared passion for art soon blossomed into a beautiful friendship and eventually, love.">تعرفنا قبل خمس سنوات خلال معرض للتصوير الفوتوغرافي في وسط البلد. كان عمر يعرض أعماله، وأسرت ملاك برؤيته الفنية. ما بدأ كشغف مشترك بالفن سرعان ما تطور إلى صداقة جميلة ثم إلى حب.</p>
+                    <p data-ar="بعد ثلاث سنوات من المواعدة، تقدم عمر بطلب الزواج خلال نزهة غروب الشمس في جزيرة الزمالك، مع أفق المدينة كخلفية. نحن متحمسون لبدء حياتنا معًا محاطين بالعائلة والأصدقاء." data-en="After three years of dating, Omar proposed during a sunset picnic in Zamalek, with the city skyline as their backdrop. They're excited to begin their forever together surrounded by family and friends.">بعد ثلاث سنوات من المواعدة، تقدم عمر بطلب الزواج خلال نزهة غروب الشمس في جزيرة الزمالك، مع أفق المدينة كخلفية. نحن متحمسون لبدء حياتنا معًا محاطين بالعائلة والأصدقاء.</p>
+                    <p data-ar="حبنا المشترك للسفر والطعام الجيد وخلق الذكريات أوصلنا إلى هذا اليوم الخاص، ولا يمكننا الانتظار للاحتفال معكم!" data-en="Their shared love for travel, good food, and making memories has brought them to this special day, and they can't wait to celebrate with you!">حبنا المشترك للسفر والطعام الجيد وخلق الذكريات أوصلنا إلى هذا اليوم الخاص، ولا يمكننا الانتظار للاحتفال معكم!</p>
+                </div>
+                <div class="about-images">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='400' viewBox='0 0 300 400'><rect width='300' height='400' fill='%23f7e7ce'/><circle cx='150' cy='150' r='80' fill='%23c9d4c8'/><rect x='100' y='250' width='100' height='150' fill='%23c9d4c8'/></svg>" alt="Omar" class="about-img">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='400' viewBox='0 0 300 400'><rect width='300' height='400' fill='%23f9e4e4'/><circle cx='150' cy='150' r='80' fill='%23d4af37'/><rect x='100' y='250' width='100' height='150' fill='%23d4af37'/></svg>" alt="Malak" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <!-- Event Details -->
+    <section class="event-details" id="details">
+        <div class="container">
+            <h2 data-ar="تفاصيل الحفل" data-en="Event Details">تفاصيل الحفل</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">📅</div>
+                    <h3 data-ar="التاريخ والوقت" data-en="Date & Time">التاريخ والوقت</h3>
+                    <p data-ar="٦ شباط ٢٠٢٦  يوم الجمعة" data-en="February 6, 2026 Friday">٦ شباط ٢٠٢٦ يوم الجمعة</p>
+                    <p data-ar="الحفل: ٥:٠٠ مساءً" data-en="Ceremony: 5:00 PM">الحفل: ٥:٠٠ مساءً</p>
+                    <p data-ar="بتشرفونا و بتكملو فرحتنا" data-en="You make our joy complete">بتشرفونا و بتكملو فرحتنا</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">📍</div>
+                    <h3 data-ar="المكان" data-en="Venue">المكان</h3>
+                    <p data-ar="قاعات روزلاند للإحتفالات" data-en="Roseland Halls">قاعات روزلاند للإحتفالات</p>
+                    <p data-ar="شارع الأرقم" data-en="Al arqoom street">شارع الأرقم</p>
+                    <p data-ar="عمان، الأردن" data-en="Amman, Jordan">عمان، الأردن</p>
+                    <a href="#map" class="btn" data-ar="عرض على الخريطة" data-en="View on Map">عرض على الخريطة</a>
+                </div>
+                <!--<div class="detail-card">
+                    <div class="detail-icon">👔</div>
+                    <h3 data-ar="اللباس" data-en="Dress Code">اللباس</h3>
+                    <p data-ar="لباس السهرة" data-en="Evening Attire">لباس السهرة</p>
+                    <p data-ar="ألوان الباستيل والملابس الرسمية الأنيقة" data-en="Soft pastels and elegant formalwear">ألوان الباستيل والملابس الرسمية الأنيقة</p>
+                </div>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule -->
+   <section class="schedule" id="schedule">
+    <div class="container">
+        <h2 data-ar="برنامج اليوم" data-en="Wedding Itinerary">برنامج اليوم</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-time" data-ar="٣:٠٠ مساءً" data-en="3:00 PM">٣:٠٠ مساءً</div>
+                    <h3 data-ar="زفة العريس" data-en="Groom's Procession">زفة العريس</h3>
+                    <p data-ar="استقبال الضيوف والترحيب بهم في بيت والد العريس" data-en="Welcoming guests at the groom's house">استقبال الضيوف والترحيب بهم في بيت والد العريس</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-time" data-ar="٣:٥٠ مساءً" data-en="3:50 PM">٣:٥٠ مساءً</div>
+                    <h3 data-ar="التحرك لبيت العروس" data-en="Moving to Bride's House">التحرك لبيت العروس</h3>
+                    <p data-ar="انطلاق العريس من بيت والد العريس إلى بيت والد العروس" data-en="Groom departs from his house to the bride's house">انطلاق العريس من بيت والد العريس إلى بيت والد العروس</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-time" data-ar="٤:٤٥ مساءً" data-en="4:45 PM">٤:٤٥ مساءً</div>
+                    <h3 data-ar="زفة العرس" data-en="Wedding Procession">زفة العرس</h3>
+                    <p data-ar="استقبال العريس عند قاعات الروزلاند" data-en="Welcoming the groom at Rozeland Halls">استقبال العريس عند قاعات الروزلاند</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-time" data-ar="٥:٠٠ مساءً" data-en="5:00 PM">٥:٠٠ مساءً</div>
+                    <h3 data-ar="بداية حفل الزفاف" data-en="Wedding Reception Begins">بداية حفل الزفاف</h3>
+                    <p data-ar="وتبدأ أفراحنا بوجودكم" data-en="Our celebration begins with your presence">وتبدأ أفراحنا بوجودكم</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-time" data-ar="٧:٣٠٠ مساءً" data-en="7:30 PM">٧:٣٠ مساءً</div>
+                    <h3 data-ar="ختام الحفل" data-en="Reception Closing">ختام الحفل</h3>
+                    <p data-ar="أدام الله أفراحنا وأفراحكم وانتهى الحفل" data-en="May our and your happiness continue, and the celebration concludes">أدام الله أفراحنا وأفراحكم وانتهى الحفل</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Gallery -->
+    <!-- Gallery items with placeholder images -->
+
+   <!-- <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 data-ar="ذكرياتنا" data-en="Our Memories">ذكرياتنا</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\' viewBox=\'0 0 400 400\'><rect width=\'400\' height=\'400\' fill=\'%23f7e7ce\'/><circle cx=\'200\' cy=\'150\' r=\'80\' fill=\'%23c9d4c8\'/><rect x=\'150\' y=\'250\' width=\'100\' height=\'150\' fill=\'%23c9d4c8\'/></svg>')">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='%23f7e7ce'/><circle cx='200' cy='150' r='80' fill='%23c9d4c8'/><rect x='150' y='250' width='100' height='150' fill='%23c9d4c8'/></svg>" alt="Gallery image 1" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\' viewBox=\'0 0 400 400\'><rect width=\'400\' height=\'400\' fill=\'%23f9e4e4\'/><circle cx=\'200\' cy=\'150\' r=\'80\' fill=\'%23d4af37\'/><rect x=\'150\' y=\'250\' width=\'100\' height=\'150\' fill=\'%23d4af37\'/></svg>')">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='%23f9e4e4'/><circle cx='200' cy='150' r='80' fill='%23d4af37'/><rect x='150' y='250' width='100' height='150' fill='%23d4af37'/></svg>" alt="Gallery image 2" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\' viewBox=\'0 0 400 400\'><rect width=\'400\' height=\'400\' fill=\'%23c9d4c8\'/><circle cx=\'200\' cy=\'150\' r=\'80\' fill=\'%23f7e7ce\'/><rect x=\'150\' y=\'250\' width=\'100\' height=\'150\' fill=\'%23f7e7ce\'/></svg>')">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='%23c9d4c8'/><circle cx='200' cy='150' r='80' fill='%23f7e7ce'/><rect x='150' y='250' width='100' height='150' fill='%23f7e7ce'/></svg>" alt="Gallery image 3" class="gallery-img">
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img src="" alt="Lightbox image" class="lightbox-img" id="lightbox-img">
+    </div>
+
+    <!-- RSVP Form -->
+   <!-- <section class="rsvp" id="rsvp">
+        <div class="container">
+            <h2 data-ar="تأكيد الحضور" data-en="RSVP">تأكيد الحضور</h2>
+            <p style="text-align: center; margin-bottom: 2rem;" data-ar="لا يمكننا الانتظار للاحتفال معكم! يرجى تأكيد الحضور قبل ١٥ مايو ٢٠٢٦." data-en="We can't wait to celebrate with you! Please RSVP by May 15, 2026.">لا يمكننا الانتظار للاحتفال معكم! يرجى تأكيد الحضور قبل ١٥ مايو ٢٠٢٦.</p>
+            
+            <form class="rsvp-form" id="rsvp-form">
+                <div class="form-group">
+                    <label for="name" class="form-label" data-ar="الاسم الكامل *" data-en="Full Name *">الاسم الكامل *</label>
+                    <input type="text" id="name" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label" data-ar="البريد الإلكتروني " data-en="Email Address ">البريد الإلكتروني </label>
+                    <input type="email" id="email" class="form-input">
+                </div>
+                
+                <!--<div class="form-group">
+                    <label for="guests" class="form-label" data-ar="عدد الضيوف *" data-en="Number of Guests *">عدد الضيوف *</label>
+                    <select id="guests" class="form-select" required>
+                        <option value="" disabled selected data-ar="اختر عدد الضيوف" data-en="Select number of guests">اختر عدد الضيوف</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="meal" class="form-label" data-ar="تفضيلات الطعام *" data-en="Meal Preference *">تفضيلات الطعام *</label>
+                    <select id="meal" class="form-select" required>
+                        <option value="" disabled selected data-ar="اختر تفضيلات الطعام" data-en="Select meal preference">اختر تفضيلات الطعام</option>
+                        <option value="beef" data-ar="لحم بقري" data-en="Beef">لحم بقري</option>
+                        <option value="chicken" data-ar="دجاج" data-en="Chicken">دجاج</option>
+                        <option value="vegetarian" data-ar="نباتي" data-en="Vegetarian">نباتي</option>
+                        <option value="vegan" data-ar="نباتي صرف" data-en="Vegan">نباتي صرف</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" class="form-label" data-ar="رسالة للعرسان" data-en="Message for the Couple">رسالة للعرسان</label>
+                    <textarea id="message" class="form-textarea" data-ar-placeholder="شاركنا تمنياتك..." data-en-placeholder="Share your well wishes..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;" data-ar="إرسال تأكيد الحضور" data-en="Submit RSVP">إرسال تأكيد الحضور</button>
+            </form>
+            
+            <div class="success-message" id="success-message">
+                <h3 data-ar="شكراً لك!" data-en="Thank You!">شكراً لك!</h3>
+                <p data-ar="تم استلام تأكيد حضورك. نتطلع للاحتفال معك!" data-en="Your RSVP has been received. We look forward to celebrating with you!">تم استلام تأكيد حضورك. نتطلع للاحتفال معك!</p>
+            </div>
+        </div>
+    </section>-->
+
+    <!-- Guest Wishes Section -->
+   <!-- <section class="wishes" id="wishes">
+        <div class="container">
+            <h2 data-ar="اكتب كلمة من قلبك" data-en="Write a words from your heart">اكتب كلمة من قلبك</h2>
+            <p style="text-align: center; margin-bottom: 2rem;" data-ar="كلماتكم الحلوة، اللي من القلب، مثل طيبتكم، بتكمّل فرحتنا وبتخلي يومنا أحلى وأجمل" data-en="Your sweet, heartfelt words, just like your kindness, complete our joy and make our day even more special!">كلماتكم الحلوة، اللي من القلب، مثل طيبتكم، بتكمّل فرحتنا وبتخلي يومنا أحلى وأجمل</p>
+            
+            <form class="wishes-form" id="wishes-form">
+                <div class="form-group">
+                    <label for="wisher-name" class="form-label" data-ar="اسمك *" data-en="Your Name *">اسمك *</label>
+                    <input type="text" id="wisher-name" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="wish" class="form-label" data-ar="كلماتك الحلوه *" data-en="Your Beautiful Wish *">كلماتك الحلوه *</label>
+                    <textarea id="wish" class="form-textarea" rows="5" data-ar-placeholder="اكتب رسالتك الحلوه هنا..." data-en-placeholder="Write your heartfelt message here..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn" style="width: 100%;" data-ar="إرسال تمنياتك" data-en="Send Your Wish">إرسال تمنياتك</button>
+            </form>
+            
+            <div class="success-message" id="wishes-success">
+                <h3 data-ar="شكراً لك على رسالتك الحلوه و الجميلة!" data-en="Thank you for your beautiful wishes!">شكراً لك على رسالتك الحلوه و الجميلة!</h3>
+                <p data-ar="تم إرسال رسالتك إلى عمر وملاك." data-en="Your message has been sent to Omar and Malak.">تم إرسال رسالتك إلى عمر وملاك.</p>
+            </div>
+        </div>
+    </section>-->
+
+    <!-- Map -->
+    <section class="map" id="map">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39646.8343715818!2d35.84006720720584!3d31.962297902011077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca1b544816139%3A0x192dc0e421a8d4f1!2z2YLYp9i52KfYqiDYsdmI2LLZhNin2YbYryDZhNmE2KXYrdiq2YHYp9mE2KfYqg!5e0!3m2!1sen!2sae!4v1761144828569!5m2!1sen!2sae" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map-iframe" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3 data-ar="عمر وملاك" data-en="Omar & Malak">عمر وملاك</h3>
+            <p data-ar="شكراً لمشاركتنا فرحتنا واحتفالنا" data-en="Thank you for sharing in our joy and celebration">شكراً لمشاركتنا فرحتنا واحتفالنا</p>
+            
+            <div class="footer-links">
+               <!-- <a href="#about" class="footer-link" data-ar="قصتنا" data-en="Our Story">قصتنا</a>-->
+                <a href="#details" class="footer-link" data-ar="التفاصيل" data-en="Details">التفاصيل</a>
+                <a href="#schedule" class="footer-link" data-ar="البرنامج" data-en="Schedule">البرنامج</a>
+                <a href="#gallery" class="footer-link" data-ar="الصور" data-en="Gallery">الصور</a>
+                <!--<a href="#rsvp" class="footer-link" data-ar="تأكيد الحضور" data-en="RSVP">تأكيد الحضور</a>-->
+            </div>
+            
+            <button class="music-btn" id="music-btn" aria-label="Toggle background music">
+                ♫
+            </button>
+            
+            <p data-ar="بكل الحب، عمر وملاك" data-en="With love, Omar & Malak">بكل الحب، عمر وملاك</p>
+        </div>
+    </footer>
+
+    <script>
+        // Language Toggle
+        const langButtons = document.querySelectorAll('.lang-btn');
+        const body = document.body;
+        
+        langButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                
+                // Update active button
+                langButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update body class
+                body.className = `lang-${lang}`;
+                
+                // Update all elements with data attributes
+                document.querySelectorAll('[data-ar], [data-en]').forEach(element => {
+                    if (element.hasAttribute(`data-${lang}`)) {
+                        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                            const placeholderAttr = element.getAttribute(`data-${lang}-placeholder`);
+                            if (placeholderAttr) {
+                                element.setAttribute('placeholder', placeholderAttr);
+                            }
+                        } else if (element.tagName === 'OPTION') {
+                            const text = element.getAttribute(`data-${lang}`);
+                            if (text) {
+                                element.textContent = text;
+                            }
+                        } else {
+                            const text = element.getAttribute(`data-${lang}`);
+                            if (text) {
+                                element.textContent = text;
+                            }
+                        }
+                    }
+                });
+            });
+        });
+
+        // Countdown Timer
+        function updateCountdown() {
+            // CUSTOMIZE: SET YOUR WEDDING DATE HERE (Year, Month-1, Day, Hour, Minute, Second)
+            const weddingDate = new Date(2026, 1, 6, 17, 0, 0); 
+            
+            const now = new Date().getTime();
+            const distance = weddingDate.getTime() - now;
+            
+            if (distance < 0) {
+                document.getElementById("countdown-text").innerHTML = body.classList.contains('lang-ar') ? 
+                    "عمر تزوج!" : "Omar Married!";
+                document.querySelector(".countdown").style.display = "none";
+                return;
+            }
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+        }
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+        
+        // Lightbox functionality
+        function openLightbox(imageSrc) {
+            document.getElementById("lightbox-img").src = imageSrc;
+            document.getElementById("lightbox").style.display = "flex";
+        }
+        
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+        
+        // Close lightbox when clicking outside the image
+        document.getElementById("lightbox").addEventListener("click", function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+        
+        // RSVP Form Submission
+        document.getElementById("rsvp-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            
+            // Simple validation
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const guests = document.getElementById("guests").value;
+            const meal = document.getElementById("meal").value;
+            
+            if (!name || !email || !guests || !meal) {
+                alert(body.classList.contains('lang-ar') ? 
+                    "يرجى ملء جميع الحقول المطلوبة." : "Please fill in all required fields.");
+                return;
+            }
+            
+            // CUSTOMIZE: REPLACE WITH YOUR GOOGLE SHEETS LINK
+            const googleSheetsLink = 'YOUR_GOOGLE_SHEETS_LINK_HERE';
+            
+            // In a real implementation, you would send this data to the Google Sheets link
+            // For this demo, we'll just show a success message
+            document.getElementById("rsvp-form").style.display = "none";
+            document.getElementById("success-message").style.display = "block";
+            
+            // Scroll to the success message
+            document.getElementById("success-message").scrollIntoView({ behavior: "smooth" });
+        });
+        
+        // Wishes Form Submission
+        document.getElementById("wishes-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            
+            // Simple validation
+            const name = document.getElementById("wisher-name").value;
+            const wish = document.getElementById("wish").value;
+            
+            if (!name || !wish) {
+                alert(body.classList.contains('lang-ar') ? 
+                    "يرجى ملء جميع الحقول المطلوبة." : "Please fill in all required fields.");
+                return;
+            }
+            
+            // CUSTOMIZE: REPLACE WITH YOUR GOOGLE SHEETS LINK
+            const googleSheetsLink = 'YOUR_GOOGLE_SHEETS_LINK_HERE';
+            
+            // In a real implementation, you would send this data to the Google Sheets link
+            // For this demo, we'll just show a success message
+            document.getElementById("wishes-form").style.display = "none";
+            document.getElementById("wishes-success").style.display = "block";
+            
+            // Scroll to the success message
+            document.getElementById("wishes-success").scrollIntoView({ behavior: "smooth" });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Fade in elements on scroll
+        function checkScroll() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }
+            });
+        }
+        
+        // Initialize fade elements
+        document.querySelectorAll('.fade-in').forEach(element => {
+            element.style.opacity = "0";
+            element.style.transform = "translateY(20px)";
+            element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+        });
+        
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+        
+        // Music toggle
+        const musicBtn = document.getElementById("music-btn");
+        let audio = null;
+        
+        musicBtn.addEventListener("click", function() {
+            if (!audio) {
+                // Create audio element - replace with your actual music file
+                audio = new Audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
+                audio.loop = true;
+            }
+            
+            if (audio.paused) {
+                audio.play();
+                musicBtn.innerHTML = "♫";
+                musicBtn.style.backgroundColor = "#b8941f";
+            } else {
+                audio.pause();
+                musicBtn.innerHTML = "♫";
+                musicBtn.style.backgroundColor = "";
+            }
+        });
+    </script>
+</body>
+</html>
